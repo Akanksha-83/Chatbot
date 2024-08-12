@@ -1,0 +1,77 @@
+{%include "header.html" %}
+
+<div class="page-nav no-margin row" xmlns="http://www.w3.org/1999/html">
+                   <div class="container">
+                       <div class="row">
+                           <h2>Admin</h2>
+                           <ul>
+                               <li> <a href="#"><i class="fas fa-home"></i> Home</a></li>
+                               <li><i class="fas fa-angle-double-right"></i> Admin Login</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+
+
+
+
+  {% if msg %}
+
+		<script>alert('Invalid Credentials')</script>
+
+    {% endif %}
+<div style="margin-top:0px;" class="row">
+
+      </div>
+<form action="adminlogin_check" method="post">
+      <div class="row contact-rooo">
+
+           <div class="row w-100">
+
+
+            <div style="padding:20px" class="col-sm-8">
+
+                <div class="row">
+                    <div class="col-sm-8">
+                         <label>User Name :</label>
+                        <input type="text" placeholder="Enter User Name" name="unm" class="form-control input-sm" required ></div>
+                </div>
+                <div style="margin-top:10px;" class="row">
+
+                    <div class="col-sm-8">
+                        <label>Password :</label>
+                        <input type="password" name="pwd" placeholder="Enter Password" class="form-control input-sm"  required></div>
+                </div>
+                 <div style="margin-top:10px;" class="row">
+                    <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
+                    <div class="col-sm-8">
+                     <button class="btn btn-danger btn-sm">&nbsp;LOGIN&nbsp;</button>
+
+
+                    </div>
+                </div>
+            </div>
+             <div class="col-sm-3">
+
+                  <div style="margin:5px" class="serv">
+
+              <img src="{{ url_for('static',filename='assets/images/aadmin.png')}}" alt="">
+
+
+
+           </div>
+
+
+         </div>
+
+            </div>
+        </div>
+</form>
+
+
+
+
+
+
+
+{%include "footer.html" %}

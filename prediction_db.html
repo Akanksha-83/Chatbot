@@ -1,0 +1,166 @@
+{%include "uheader.html" %}
+
+<div class="page-nav no-margin row" xmlns="http://www.w3.org/1999/html">
+                   <div class="container">
+                       <div class="row">
+                           <h2>Identify the Diabetes Prediction</h2>
+                           <ul>
+                               <li> <a href="#"><i class="fas fa-home"></i> UserHome</a></li>
+                               <li><i class="fas fa-angle-double-right"></i>Prediction Form</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+
+
+<div style="margin-top:0px;" class="row">
+
+      </div>
+<form action="prediction_db" method="post">
+      <div class="row contact-rooo">
+
+           <div class="row w-100">
+
+
+            <div style="padding:20px" class="col-sm-8">
+ {% if result == 1 %}
+
+                <center><h5>Heart Disease Prediction is :  <font color="red">POSITIVE</font></h5></center>
+<br><br>
+    {% endif %}
+
+                  {% if result == 0 %}
+
+      <center><h5>Heart Disease Prediction is  :  <font color="green">NEGATIVE</font></h5>  </center>
+<br><br>
+    {% endif %}
+
+                <div style="margin-top:10px;" class="row">
+
+                    <div class="col-sm-8">
+                        <label>Patient's Gender</label>
+                        <select name="gender" class="form-control input-sm"  required>
+
+                            <option value="">Select</option>
+                            <option value="1">Male</option>
+                             <option value="0">Female</option>
+
+                        </select>
+                       </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-8">
+                         <label>Patient's Age</label>
+                        <input type="number" placeholder="" name="age" class="form-control input-sm" required ></div>
+                </div>
+
+
+                <div style="margin-top:10px;" class="row">
+
+                    <div class="col-sm-8">
+                        <label>Was Patient Hypertensive? (prevalentHyp) </label>
+                        <select name="hyp" class="form-control input-sm"  required>
+
+                            <option value="">Select</option>
+                            <option value="1">Yes</option>
+                             <option value="0">No</option>
+
+                        </select>
+                       </div>
+                </div>
+
+
+                <div style="margin-top:10px;" class="row">
+
+                    <div class="col-sm-8">
+                        <label>heart_disease</label>
+                        <select name="hd" class="form-control input-sm"  required>
+
+                            <option value="">Select</option>
+                            <option value="1">Yes</option>
+                             <option value="0">No</option>
+
+                        </select>
+                       </div>
+                </div>
+
+
+
+
+
+
+
+
+                <div class="row">
+                    <div class="col-sm-8">
+                         <label>bmi</label>
+                        <input type="number" placeholder="" name="bmi" class="form-control input-sm" required ></div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-8">
+                         <label>HbA1c_level</label>
+                        <input type="number" placeholder="" name="hba" class="form-control input-sm" required ></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-8">
+                         <label>blood_glucose_level</label>
+                        <input type="number" placeholder="" name="glucose" class="form-control input-sm" required ></div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 <div style="margin-top:10px;" class="row">
+                    <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
+                    <div class="col-sm-8">
+                     <button class="btn btn-danger btn-sm">&nbsp;Prediction&nbsp;</button>
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+             <div class="col-sm-3">
+
+                  <div style="margin:5px" class="serv">
+
+              <img src="{{ url_for('static',filename='assets/images/hdadmin.png')}}" alt="">
+
+
+
+           </div>
+
+
+         </div>
+
+            </div>
+        </div>
+</form>
+
+
+
+
+
+
+
+{%include "footer.html" %}

@@ -1,0 +1,89 @@
+{%include "uheader.html" %}
+
+<div class="page-nav no-margin row" xmlns="http://www.w3.org/1999/html">
+                   <div class="container">
+                       <div class="row">
+                           <h2>Spam Email Detection</h2>
+                           <ul>
+                               <li> <a href="#"><i class="fas fa-home"></i> UserHome</a></li>
+                               <li><i class="fas fa-angle-double-right"></i>Prediction Form</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+
+
+<div style="margin-top:0px;" class="row">
+
+      </div>
+<form action="prediction_spam" method="post">
+      <div class="row contact-rooo">
+
+           <div class="row w-100">
+
+
+            <div style="padding:20px" class="col-sm-8">
+ {% if result == 'spam' %}
+
+                <center><h5>Spam Email Detection is :  <font color="red">SPAM</font></h5></center>
+<br><br>
+    {% endif %}
+
+                  {% if result == 'ham'%}
+
+      <center><h5>Spam Email Detection  is  :  <font color="green">HAM</font></h5>  </center>
+<br><br>
+    {% endif %}
+                <div class="row">
+                    <div class="col-sm-8">
+                         <label>Email Message</label>
+                        <textarea placeholder="Enter Email Message" name="msg" class="form-control input-sm" required ></textarea></div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                 <div style="margin-top:10px;" class="row">
+                    <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
+                    <div class="col-sm-8">
+                     <button class="btn btn-danger btn-sm">&nbsp;Prediction&nbsp;</button>
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+             <div class="col-sm-3">
+
+                  <div style="margin:5px" class="serv">
+
+              <img src="{{ url_for('static',filename='assets/images/hdadmin.png')}}" alt="">
+
+
+
+           </div>
+
+
+         </div>
+
+            </div>
+        </div>
+</form>
+
+
+
+
+
+
+
+{%include "footer.html" %}

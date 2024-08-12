@@ -1,0 +1,107 @@
+{%include "aheader.html" %}
+<head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+
+</head>
+<div class="page-nav no-margin row" xmlns="http://www.w3.org/1999/html">
+                   <div class="container">
+                       <div class="row">
+                           <h2>ML Evaluations</h2>
+                           <ul>
+                               <li> <a href="#"><i class="fas fa-home"></i> AdminHome</a></li>
+                               <li><i class="fas fa-angle-double-right"></i>Models Evaluations</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+
+<div style="margin-top:0px;" class="row">
+
+      </div>
+
+
+			  {% if evaluations %}
+<br>
+<table id="customers" align="center">
+  <tr>
+    <th>Techniques</th>
+    <th>Accuracy</th>
+      <th>Precision</th>
+    <th>Recall</th>
+      <th>F1 Score</th>
+
+  </tr>
+{%  for data in evaluations %}
+	<tr><td><strong>{{data[0]}}</strong></td>
+        <td><strong>{{data[1]}}</strong></td>
+        <td><strong>{{data[2]}}</strong></td>
+        <td><strong>{{data[3]}}</strong></td>
+        <td><strong>{{data[4]}}</strong></td>
+
+
+
+    </tr>
+{% endfor %}
+
+
+
+
+    {% endif %}
+    </table>
+
+<br><br><br><br>
+<section class="our-blog row">
+
+
+        		<div class="blog-row row">
+        			<div class="col-lg-4 col-md-6">
+        				<div class="single-blog">
+
+                                 <div class="chart" id="barchart">
+
+
+</div>
+        				</div>
+        			</div>
+
+
+
+
+        		</div>
+
+
+
+
+         </section>
+
+
+
+{%include "footer.html" %}

@@ -1,0 +1,116 @@
+{%include "aheader.html" %}
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+</head>
+<div class="page-nav no-margin row" xmlns="http://www.w3.org/1999/html">
+                   <div class="container">
+                       <div class="row">
+                           <h2>Data Preprocessing</h2>
+                           <ul>
+                               <li> <a href="#"><i class="fas fa-home"></i> AdminHome</a></li>
+                               <li><i class="fas fa-angle-double-right"></i> Data Preprocessing</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+
+
+
+<div style="margin-top:0px;" class="row">
+
+      </div>
+<form action="data_preprocessing" method="post">
+      <div class="row contact-rooo">
+
+           <div class="row w-100">
+
+
+            <div style="padding:20px" class="col-sm-8">
+
+                <div class="row">
+                    <div class="col-sm-8">
+                         <label>Select Dataset</label>
+                        <input type="file"  name="file" class="form-control input-sm" required accept="text/csv"></div>
+                </div>
+
+                 <div style="margin-top:10px;" class="row">
+                    <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
+                    <div class="col-sm-8">
+                     <button class="btn btn-danger btn-sm">Data Preprocessing&nbsp;</button>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+        </div>
+</form>
+
+			  {% if orecords %}
+<h5>Original Dataset Records : {{ orecords}}</h5>
+<h5>After PreProcessing Dataset Records : {{ precords}}</h5>
+<br>
+<table id="customers" align="center">
+  <tr>
+    <th> Age</th>
+    <th>Gender</th>
+      <th> CurrentSmoker</th>
+    <th>CigsPerDay</th>
+      <th>BPMeds</th>
+    <th>Diabetes</th>
+      <th>TotalChol</th>
+      <th>BMI</th>
+      <th>HeartRate</th>
+    <th>TenYearCHD</th>
+
+  </tr>
+{%  for data in rawdata %}
+	<tr><td><strong>{{data[0]}}</strong></td>
+        <td><strong>{{data[1]}}</strong></td>
+        <td><strong>{{data[2]}}</strong></td>
+        <td><strong>{{data[3]}}</strong></td>
+        <td><strong>{{data[4]}}</strong></td>
+        <td><strong>{{data[7]}}</strong></td>
+        <td><strong>{{data[8]}}</strong></td>
+        <td><strong>{{data[11]}}</strong></td>
+        <td><strong>{{data[12]}}</strong></td>
+        <td><strong>{{data[14]}}</strong></td>
+
+
+    </tr>
+{% endfor %}
+
+    {% endif %}
+
+</table>
+
+<br><br><br><br>
+
+
+{%include "footer.html" %}

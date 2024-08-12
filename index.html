@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ML_DL_Approaches</title>
+
+
+
+    <link rel="shortcut icon" href="{{ url_for('static',filename='assets/images/fav.jpg')}}">
+    <link rel="stylesheet" href=" {{ url_for('static',filename='assets/css/bootstrap.min.css')}} ">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/fontawsom-all.min.css')}} ">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/slider/css/owl.carousel.min.css')}} ">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/slider/css/owl.theme.default.css')}} ">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='assets/css/style.css')}}" />
+</head>
+
+<body>
+    <div class="container body-container">
+        <!-- ################# Header Starts Here#######################--->
+        <header>
+            <div class="row header-top">
+                <div class="col-lg-7 col-md-12 left-item">
+                    <ul>
+
+                    </ul>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block right-item">
+                    <ul>
+                        <li><a><i class="fab fa-github"></i></a></li>
+                        <li><a><i class="fab fa-google-plus-g"></i></a></li>
+                        <li> <a><i class="fab fa-pinterest-p"></i></a></li>
+                        <li><a><i class="fab fa-twitter"></i></a></li>
+                        <li> <a><i class="fab fa-facebook-f"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div  class=" ">
+           
+                <div class="row header-nav">
+                    <div class="col-md-3 no-padding col-sm-12 nav-img">
+
+                       <a data-toggle="collapse" data-target="#menu" href="#menu" ><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
+                    </div>
+                    <div id="menu" class="col-md-9 d-none d-md-block nav-item">
+                        <ul>
+                            <li><a href="{{ url_for('index') }}">Home</a></li>
+                              <li><a href="{{ url_for('admin') }}">Admin</a></li>
+                            <li><a href="{{ url_for('user') }}">User</a></li>
+
+                            </ul>
+                    </div>
+                </div>
+
+            
+        </div>
+        </header>
+        
+        <!-- ################# Slider Starts Here#######################--->
+     <div class="slider row">
+        <!-- Set up your HTML -->
+        <div class="owl-carousel ">
+            <div class="slider-img">
+                <div class="item">
+                    <div class="slider-img"><img src="{{ url_for('static',filename='assets/images/slider/amd.png')}}" alt=""></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                                <div class="slider-captions">
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</div>
+
+</body>
+
+<script src="{{ url_for('static',filename='assets/js/jquery-3.2.1.min.js')}}"></script>
+<script src=" {{ url_for('static',filename='assets/js/popper.min.js')}} "></script>
+<script src="{{ url_for('static',filename='assets/js/bootstrap.min.js')}} "></script>
+<script src="{{ url_for('static',filename='assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js')}} "></script>
+<script src="{{ url_for('static',filename='assets/plugins/slider/js/owl.carousel.min.js')}} "></script>
+<script src="{{ url_for('static',filename='assets/js/script.js')}}"></script>
+
+
+</html>

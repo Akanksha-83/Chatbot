@@ -1,0 +1,65 @@
+{%include "uheader.html" %}
+
+<div class="page-nav no-margin row" xmlns="http://www.w3.org/1999/html">
+                   <div class="container">
+                       <div class="row">
+                           <h2>Image Classification</h2>
+                           <ul>
+                               <li> <a href="#"><i class="fas fa-home"></i> UserHome</a></li>
+                               <li><i class="fas fa-angle-double-right"></i>Classification Form</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+
+
+<div style="margin-top:0px;" class="row">
+
+      </div>
+<form action="prediction_image" method="post" ENCTYPE="multipart/form-data">
+      <div class="row contact-rooo">
+
+           <div class="row w-100">
+
+
+            <div style="padding:20px" class="col-sm-8">
+
+                <div class="row">
+                    <div class="col-sm-8">
+                         <h3><label>Prediction Results: </label><font color="blue">&nbsp;{{result}}</font></h3>
+
+ <img src="{{ url_for('static',filename='detection.jpg')}}" width="500" height="500" alt="">
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+             <div class="col-sm-3">
+
+                  <div style="margin:5px" class="serv">
+
+
+
+
+           </div>
+
+
+         </div>
+
+            </div>
+        </div>
+</form>
+
+
+
+
+
+
+
+{%include "footer.html" %}

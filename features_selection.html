@@ -1,0 +1,81 @@
+{%include "aheader.html" %}
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+</head>
+<div class="page-nav no-margin row" xmlns="http://www.w3.org/1999/html">
+                   <div class="container">
+                       <div class="row">
+                           <h2>Features Selection</h2>
+                           <ul>
+                               <li> <a href="#"><i class="fas fa-home"></i> AdminHome</a></li>
+                               <li><i class="fas fa-angle-double-right"></i>Features Selection</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+
+
+
+<div style="margin-top:0px;" class="row">
+
+      </div>
+<form action="selected_features" method="post">
+      <div class="row contact-rooo">
+
+           <div class="row w-100">
+
+
+            <div style="padding:20px" class="col-sm-8">
+
+                <div class="row">
+                    <div class="col-sm-8">
+                         <label>Dataset File</label>
+                        <input type="text"  name="file" value="preprocessed_dataset.csv" class="form-control input-sm" readonly accept="text/csv"></div>
+                </div>
+
+                 <div style="margin-top:10px;" class="row">
+                    <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
+                    <div class="col-sm-8">
+                     <button class="btn btn-danger btn-sm">Features Selection</button>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+        </div>
+</form>
+
+			  {% if features_list %}
+<h5>Selected Features : {{ features_list}}</h5>
+{% endif %}
+<br><br><br><br>
+
+
+{%include "footer.html" %}
